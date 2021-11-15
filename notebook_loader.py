@@ -32,6 +32,7 @@ class NotebookLoader(object):
 
     def __init__(self, path=None, cell_filter=None):
         self.shell = InteractiveShell.instance()
+        self.shell.enable_gui = lambda x: False
         self.path = path
         self.cell_filter = cell_filter
 
